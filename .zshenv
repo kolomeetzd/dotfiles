@@ -29,6 +29,9 @@ fpath=($ZFUNCDIR $fpath)
 # Use XDG dirs with `xinit`.
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 
+# Override GnuPG home directory.
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+
 # Add directories to $PATH safely.
 #
 # NOTE: Glob qualifier (N) is unnecessary here because we're not doing pattern matching.
