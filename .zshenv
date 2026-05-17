@@ -27,7 +27,8 @@ export ZFUNCDIR="$ZDOTDIR/functions"
 fpath=($ZFUNCDIR $fpath)
 
 # Use XDG dirs with `xinit`.
-export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
 # Override GnuPG home directory.
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
