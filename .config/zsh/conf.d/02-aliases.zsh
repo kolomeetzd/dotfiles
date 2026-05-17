@@ -23,3 +23,5 @@ alias lint='nocorrect go run github.com/golangci/golangci-lint/cmd/golangci-lint
 alias test='go test ./... -cover -coverprofile=./cover.out -covermode=atomic -race -count 1'
 
 alias dotfiles='/usr/bin/git --git-dir="${HOME}/personal/dotfiles/" --work-tree="$HOME"'
+
+alias wget='wget --hsts-file="$XDG_STATE_HOME/wget/wget-hsts"'
