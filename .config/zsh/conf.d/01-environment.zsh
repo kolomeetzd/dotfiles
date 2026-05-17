@@ -18,3 +18,7 @@ export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 # Custom paths.
 export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"
 export XCURSOR_PATH="/usr/share/icons"
+
+# Do not store game (e.g., Roadwarden) savefiles in `$HOME`.
+export RENPY_PATH_TO_SAVES="$XDG_DATA_HOME/renpy"
+export RENPY_MULTIPERSISTENT="$XDG_DATA_HOME/renpy_shared"
