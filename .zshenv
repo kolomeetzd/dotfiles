@@ -42,6 +42,10 @@ export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
 export PYTHONUSERBASE="$XDG_DATA_HOME/python"
 
+# Configure Vagrant to respect XDG Base Directory specification.
+export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"
+export VAGRANT_ALIAS_FILE="$XDG_DATA_HOME/vagrant/aliases"
+
 # Add directories to $PATH safely.
 #
 # NOTE: Glob qualifier (N) is unnecessary here because we're not doing pattern matching.

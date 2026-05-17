@@ -15,8 +15,7 @@ export MANWIDTH=${MANWIDTH:-80}
 export LESS='-iXF -R --use-color -Dd+r$Du+b'
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 
-# Custom paths.
-export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"
+# Where to find cursor icons.
 export XCURSOR_PATH="/usr/share/icons"
 
 # Do not store game (e.g., Roadwarden) savefiles in `$HOME`.
