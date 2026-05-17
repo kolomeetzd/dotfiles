@@ -37,6 +37,11 @@ export GOPATH="$XDG_DATA_HOME/go"
 export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 export GOCACHE="$XDG_CACHE_HOME/go-build"
 
+# Configure Python to respect XDG Base Directory specification.
+export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
+export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
+export PYTHONUSERBASE="$XDG_DATA_HOME/python"
+
 # Add directories to $PATH safely.
 #
 # NOTE: Glob qualifier (N) is unnecessary here because we're not doing pattern matching.
