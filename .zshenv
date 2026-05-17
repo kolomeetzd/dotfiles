@@ -1,0 +1,43 @@
+#!/usr/bin/env zsh
+
+# ~/.zshenv - Used for setting user's environment variables.
+#
+# It should not contain commands that produce output or assume the shell is attached to a TTY.
+# When this file exists it will always be read.
+#
+# NOTE: .zshenv needs to live at ~/.zshenv, not in $ZDOTDIR!
+#
+# See: <https://wiki.archlinux.org/title/Zsh#Startup/Shutdown_files>
+
+# Maintaine all XDG directory setup.
+# See: <https://wiki.archlinux.org/title/XDG_Base_Directory#User_directories>.
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+export XDG_DATA_DIRS="/usr/local/share:/usr/share"
+export XDG_CONFIG_DIRS="/etc/xdg"
+
+# Set ZDOTDIR to re-home Zsh config files.
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+# Specify where Zsh should look for autoloadable user functions.
+export ZFUNCDIR="$ZDOTDIR/functions"
+fpath=($ZFUNCDIR $fpath)
+
+# Add directories to $PATH safely.
+#
+# NOTE: Glob qualifier (N) is unnecessary here because we're not doing pattern matching.
+# - The paths are just directory names, not patterns.
+# - It only affects pattern matching behavior when no matches are found.
+# - Zsh sets the NULL_GLOB option for the current pattern if a directory
+#   does not exist or produces no matches, and silently skips it
+#   instead of throwing a "no matches found" error.
+#
+# See: <https://zsh.sourceforge.io/Doc/Release/Expansion.html#Glob-Qualifiers>.
+path=(
+  $HOME/.local/bin(N)
+  /usr/local/go/bin(N)
+  $path
+)
