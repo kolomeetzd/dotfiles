@@ -21,3 +21,6 @@ export XCURSOR_PATH="/usr/share/icons"
 # Do not store game (e.g., Roadwarden) savefiles in `$HOME`.
 export RENPY_PATH_TO_SAVES="$XDG_DATA_HOME/renpy"
 export RENPY_MULTIPERSISTENT="$XDG_DATA_HOME/renpy_shared"
+
+# Make Winetricks use XDG-alike location.
+export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
