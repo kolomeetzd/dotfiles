@@ -26,6 +26,9 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export ZFUNCDIR="$ZDOTDIR/functions"
 fpath=($ZFUNCDIR $fpath)
 
+# Use XDG dirs with `xinit`.
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+
 # Add directories to $PATH safely.
 #
 # NOTE: Glob qualifier (N) is unnecessary here because we're not doing pattern matching.

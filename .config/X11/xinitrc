@@ -1,0 +1,22 @@
+# Use proprietary NVIDIA driver as the primary rendering provider.
+#
+# See: <https://wiki.archlinux.org/title/NVIDIA_Optimus#Use_NVIDIA_graphics_only>.
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+xrandr --dpi 192
+
+# Load and merge X11 resource file.
+#
+# See: <https://wiki.archlinux.org/title/X_resources#xinitrc>.
+[[ -f "$XDG_CONFIG_HOME/X11/xresources" ]] && xrdb -merge -I$XDG_CONFIG_HOME/X11 $XDG_CONFIG_HOME/X11/xresources
+
+# Adjust typematic delay and rate.
+#
+# See: <https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Using_xset>.
+xset r rate 400 25
+
+# Start ssh-agent as a wrapper program, so
+# only one instance lives and dies with the entire X session.
+#
+# See: <https://wiki.archlinux.org/title/SSH_keys#ssh-agent_as_a_wrapper_program>.
+exec ssh-agent dbus-launch awesome
