@@ -8,6 +8,7 @@
 [user]
     name = Daniel Kolomeetz
     email = kolomeetz.dany@yandex.ru
+    signingkey = 89FA805667839DC1
 
 [includeIf "gitdir:~/work"]
     path = ~/.config/git/config-work
@@ -112,3 +113,7 @@
     pforce = push --force-with-lease
 [rerere]
     enabled = true
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
