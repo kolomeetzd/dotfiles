@@ -32,6 +32,11 @@ export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 # Override GnuPG home directory.
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
+# Configure Go to respect XDG Base Directory specification.
+export GOPATH="$XDG_DATA_HOME/go"
+export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
+export GOCACHE="$XDG_CACHE_HOME/go-build"
+
 # Add directories to $PATH safely.
 #
 # NOTE: Glob qualifier (N) is unnecessary here because we're not doing pattern matching.

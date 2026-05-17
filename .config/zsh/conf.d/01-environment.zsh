@@ -16,6 +16,5 @@ export LESS='-iXF -R --use-color -Dd+r$Du+b'
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 
 # Custom paths.
-export GOPATH="${XDG_DATA_HOME}/go"
-export VAGRANT_HOME="${XDG_DATA_HOME}/vagrant"
+export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"
 export XCURSOR_PATH="/usr/share/icons"
