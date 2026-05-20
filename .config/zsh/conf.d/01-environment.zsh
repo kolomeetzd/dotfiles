@@ -10,7 +10,7 @@ export GPG_TTY="$(tty)"
 export KEYTIMEOUT=1
 
 # Pagers settings.
-export MANPAGER="bat"
+export MANPAGER="bat -p"
 export MANWIDTH=${MANWIDTH:-80}
 export LESS='-iXF -R --use-color -Dd+r$Du+b'
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
