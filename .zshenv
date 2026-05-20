@@ -22,10 +22,6 @@ export XDG_CONFIG_DIRS="/etc/xdg"
 # Set ZDOTDIR to re-home Zsh config files.
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-# Specify where Zsh should look for autoloadable user functions.
-export ZFUNCDIR="$ZDOTDIR/functions"
-fpath=($ZFUNCDIR $fpath)
-
 # Use XDG dirs with `xinit`.
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
