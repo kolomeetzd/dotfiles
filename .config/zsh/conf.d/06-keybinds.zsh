@@ -25,8 +25,8 @@ bindkey "^w" backward-kill-word
 # bindkey "^r" history-incremental-search-backward
 
 # Tmux sessionizer defaults.
-bindkey -s "^[f" "$HOME/.local/bin/tmux-sessionizer^M"
-bindkey -s "^[t" "$HOME/.local/bin/tmux-sessionizer $XDG_CONFIG_HOME/nvim^M"
-bindkey -s "^[v" "$HOME/.local/bin/tmux-sessionizer $XDG_CONFIG_HOME/tmux^M"
+bindkey -s "^[f" "$HOME/.local/bin/zsesh^M"
+bindkey -s "^[t" "$HOME/.local/bin/zsesh $XDG_CONFIG_HOME/nvim^M"
+bindkey -s "^[v" "$HOME/.local/bin/zsesh $XDG_CONFIG_HOME/tmux^M"
 
 # bindkey -s "^[d" "$HOME/.local/bin/todo.sh^M"

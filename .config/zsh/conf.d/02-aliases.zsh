@@ -15,7 +15,6 @@ alias git='nocorrect /usr/bin/git'
 alias -s {epub,pdf,djvu}='zathura'
 
 alias steam='LANG=ru_RU.UTF8 /usr/bin/steam'
-alias tms='$HOME/.local/bin/tmux-sessionizer'
 
 alias weather='curl -s -q wttr.in/stavropol'
 
