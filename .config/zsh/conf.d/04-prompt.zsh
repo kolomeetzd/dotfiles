@@ -117,8 +117,8 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
 # Displays vi-mode indicator.
 function _vi_mode() {
-    local vi_insert='%F{3}→ i%f' # Yellow for -- INSERT --
-    local vi_normal='%F{4}✗ n%f' # Blue for -- NORMAL --
+    local vi_insert='%F{8}→ i%f' # Black/Gray for -- INSERT --
+    local vi_normal='%F{6}✗ n%f' # Blue/Cyan for -- NORMAL --
 
     print - "${${KEYMAP/vicmd/$vi_normal}/(main|viins)/$vi_insert}"
 }
