@@ -1,7 +1,8 @@
 #!/usr/bin/env zsh
 
-# rehash - Optimize Zsh rehashing for pacman cache.
+# file: $ZFUNCDIR/rehash
 #
+# Optimize Zsh rehashing for pacman cache.
 # - Tracks last cache modification time via /var/cache/zsh/pacman.
 # - Rehashes commands only when cache is newer than last check.
 # - Hooks into precmd to run before each prompt.

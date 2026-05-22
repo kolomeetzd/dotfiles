@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
-# 03-history.zsh - Configures Zsh's history system with XDG-compliant storage.
+# file: $ZDOTDIR/conf.d/03-history.zsh
+#
+# Configure Zsh's history system with XDG-compliant storage.
 # - Sets history file location in `$XDG_STATE_HOME/zsh`.
 # - Configures size limits and duplicate handling.
 # - Should be placed in `$ZDOTDIR/conf.d`.

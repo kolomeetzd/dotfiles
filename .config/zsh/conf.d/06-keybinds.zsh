@@ -2,8 +2,11 @@
 
 # file: $ZDOTDIR/conf.d/06-keybinds.zsh
 #
-# Manages key bindings in Zsh is by using string capabilities from terminfo.
+# Manage key bindings in Zsh is by using string capabilities from terminfo.
 # See: <https://wiki.archlinux.org/title/Zsh#Key_bindings>.
+
+# Change the delay of pressing Esc key in vi-mode.
+export KEYTIMEOUT=1
 
 # Create a zkbd compatible hash.
 typeset -g -A key

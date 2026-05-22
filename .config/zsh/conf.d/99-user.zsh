@@ -1,17 +1,12 @@
-# try to avoid the 'zsh: no matches found...'
-setopt nonomatch
+#!/usr/bin/env zsh
 
-# alert me if something failed
-setopt printexitvalue
-
-# Some magic from gentoo wiki
+# file: $ZDOTDIR/conf.d/99-user.zsh
 #
-# See: <https://wiki.gentoo.org/wiki/Zsh/Guide#Miscellaneous_settings>.
-setopt autocd
-setopt extendedglob
+# User-specific Zsh configuration.
 
-## Docker
-# dcleanup(){
-#     docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
-#     docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
-# }
+# Enable autocd: change directory by typing path without `cd`.
+setopt autocd
+
+# Enable extended globbing for regex-like pattern matching
+# (e.g., `cp ^*.(tar` matches all .tar files).
+setopt extendedglob

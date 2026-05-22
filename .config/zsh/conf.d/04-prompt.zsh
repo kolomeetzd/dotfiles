@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
-# 04-prompt.zsh - Configures a custom prompt.
+# file: $ZDOTDIR/conf.d/04-prompt.zsh
+#
+# Configures a custom prompt.
 
 # 1. Prompt system init
 autoload -Uz promptinit

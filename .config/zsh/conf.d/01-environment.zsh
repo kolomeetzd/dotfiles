@@ -1,26 +1,29 @@
-# Default editor.
+#!/usr/bin/env zsh
+
+# file: $ZDOTDIR/conf.d/01-environment
+#
+# User environment variables.
+
+# Set default editor to Neovim.
 export EDITOR=nvim
 export VISUAL=nvim
 
-# <https://wiki.archlinux.org/title/GnuPG#Configure_pinentry_to_use_the_correct_TTY>
+# Configure GPG to use current TTY for pinentry.
+# See: <https://wiki.archlinux.org/title/GnuPG#Configure_pinentry_to_use_the_correct_TTY>.
 export GPG_TTY="$(tty)"
 
-# Change the delay of pressing Esc key in `vi` mode.
-# TODO: Move to the rest of key binding settings.
-export KEYTIMEOUT=1
-
-# Pagers settings.
+# Pager configurations.
 export MANPAGER="bat -p"
 export MANWIDTH=${MANWIDTH:-80}
 export LESS='-iXF -R --use-color -Dd+r$Du+b'
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 
-# Where to find cursor icons.
+# Cursor icon paths.
 export XCURSOR_PATH="/usr/share/icons"
 
-# Do not store game (e.g., Roadwarden) savefiles in `$HOME`.
+# Redirect game savefiles to XDG-compliant locations.
 export RENPY_PATH_TO_SAVES="$XDG_DATA_HOME/renpy"
 export RENPY_MULTIPERSISTENT="$XDG_DATA_HOME/renpy_shared"
 
-# Make Winetricks use XDG-alike location.
+# Set Winetricks prefix to XDG data directory.
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"

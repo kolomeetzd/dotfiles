@@ -1,13 +1,19 @@
 #!/usr/bin/env zsh
 
-# 03-completion.zsh - Manages Zsh's completion system.
+# file: $ZDOTDIR/conf.d/03-completion.zsh
 #
+# Manage Zsh's completion system.
 # - Configures menu selection, case sensitivity, etc.
 # - Sources completion plugins (e.g., fzf).
 # - Keep this file lightweight; move heavy logic to functions.
 # - Must be placed in $ZDOTDIR/conf.d (loaded by .zshrc).
 
-# USER CONFIGURATION
+# 1. Global options
+
+# Try to avoid the 'zsh: no matches found...' warnings.
+setopt nonomatch
+
+# 2. Completion customization
 
 # Use XDG dirs for completion.
 # <https://wiki.archlinux.org/title/XDG_Base_Directory#Partial>
@@ -55,7 +61,7 @@ zstyle ':completion:*:descriptions' format '%F{yellow}%B%d%b%f'
 # Configure default colors for 'file' group completion items (files, directories, etc.).
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-# EXTERNAL SOURCES
+# 3. External sources
 
 # Fzf completion.
 #

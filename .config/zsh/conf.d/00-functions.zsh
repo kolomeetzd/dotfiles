@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
 # file: $ZDOTDIR/conf.d/00-functions.zsh
+#
+# User function autoload setup.
 
 # Specify where Zsh should look for autoloadable user functions.
 export ZFUNCDIR="$ZDOTDIR/functions"
