@@ -57,9 +57,9 @@ bindkey -- "^A" beginning-of-line
 bindkey -- "^E" end-of-line
 
 # Tmux sessionizer defaults.
-bindkey -s "^[f" "$HOME/.local/bin/zsesh^M"
-bindkey -s "^[t" "$HOME/.local/bin/zsesh $XDG_CONFIG_HOME/nvim^M"
-bindkey -s "^[v" "$HOME/.local/bin/zsesh $XDG_CONFIG_HOME/tmux^M"
+bindkey -s "^[f" "$HOME/.local/bin/zsesh\n"
+bindkey -s "^[v" "$HOME/.local/bin/zsesh $XDG_CONFIG_HOME/nvim\n"
+bindkey -s "^[t" "$HOME/.local/bin/zsesh $XDG_CONFIG_HOME/tmux\n"
 # bindkey -s "^[d" "$HOME/.local/bin/todo.sh^M"
 
 # Checks wether the terminal is in application mode, when zle is
