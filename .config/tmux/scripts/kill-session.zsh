@@ -13,7 +13,11 @@ fi
 local sesh_count=$(tmux list-sessions -F "#{session_name}" | wc -l)
 if [ $sesh_count -ge 2 ]; then
     tmux switch-client -ln
+
+    local sesh_prev=$(tmux display-message -p "#{client_last_session}")
+    tmux kill-session -t $sesh_prev
+
+    exit 0
 fi
 
-local sesh_current=$(tmux display-message -p "#{session_name}")
-tmux kill-session -t $(tmux display-message -p "#{session_name}")
+tmux kill-session
